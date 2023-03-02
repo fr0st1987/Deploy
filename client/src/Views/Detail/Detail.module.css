@@ -89,7 +89,7 @@
 
 @media screen and (max-width: 768px) {
   .detail {
-    margin-top: 4rem;
+    margin-top: 7rem;
     padding: 1rem;
   }
 
@@ -121,7 +121,7 @@
 /* Media query para 576px */
 @media screen and (max-width: 576px) {
   .detail {
-    margin-top: 3rem;
+    margin-top: 7rem;
     padding: 0.5rem;
   }
 
