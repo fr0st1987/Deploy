@@ -37,7 +37,10 @@
   cursor: pointer;
   text-decoration: none;
 }
-
+.login:hover {
+  background-color: #69b3f8;
+  border: 1px solid #1890ff;
+}
 .btn:hover {
   background-color: #69b3f8;
   border: 1px solid #1890ff;

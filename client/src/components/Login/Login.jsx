@@ -39,20 +39,20 @@ const Login = (props) => {
                 <div className ={style.subcontainer}>
                     <label>Username: </label>
                     <input
-                        className={errors.name && 'warning'}
+                        className={errors.username ? errors.username : null}
                         name='username'
                         value={userData.username}
                         type='text'
                         onChange={handleInputChange}
                     />
-                    <p className={style.danger}>{errors.username ? errors.username : null}</p>
+                    <p className={style.danger}>{errors.username ? style.warning : null}</p>
 
                 </div>
 
                 <div>
                     <label>Password: </label>
                     <input
-                        className={errors.name && 'warning'}
+                        className={errors.username ? style.warning : null}
                         name='password'
                         value={userData.password}
                         type='password'

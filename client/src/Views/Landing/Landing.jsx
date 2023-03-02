@@ -8,11 +8,11 @@ const Landing = () => {
     function scrollToAbout() {
         const about = document.getElementById("about");
         if (about) {
-          about.scrollIntoView({ behavior: "smooth" });
+            about.scrollIntoView({ behavior: "smooth" });
         }
-      }
+    }
     return (
-    <>
+        <>
             <section id="landing">
                 <div className={style.container}>
                     <Link to='home'>
@@ -28,9 +28,9 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-      
-                <About />
-          
+
+            <About />
+
         </>
     );
 }
