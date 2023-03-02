@@ -14,14 +14,20 @@ import Login from './components/Login/Login'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import axios from 'axios';
+require('dotenv').config();
+const {
+  USER, PASSWORD,
+} = process.env
+axios.defaults.baseURL = 'http://localhost:3001/';
 
 
 function App() {
   const location = useLocation()
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
-  const username = 'admin@admin.com';
-  const password = 'admin1234';
+  const username = USER;
+  const password = PASSWORD;
 
 
   function login(userData) {
@@ -34,19 +40,19 @@ function App() {
         icon: 'error',
         title: 'Oops...',
         text: `Wrong username or password!`,
-    })
-  }
+      })
+    }
   }
 
   useEffect(() => {
     if (!access)
-    navigate('/');
+      navigate('/');
   }, [access]);
 
   function logOut() {
     setAccess(false)
     navigate('/');;
-    
+
   }
 
   return (

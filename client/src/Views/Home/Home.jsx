@@ -6,6 +6,7 @@ import {
     filterByContinent,
     getAllActivities,
     getAllCountries,
+    Clean
 } from '../../redux/actions';
 import style from './Home.module.css'
 
@@ -109,7 +110,12 @@ const Home = () => {
             orderByPop: 'All',
             filter: 'All',
             filterBy: 'All',
-
+        })
+        Clean({
+            orderBy: '',
+            orderByPop: '',
+            filter: '',
+            filterBy: '',
         })
         dispatch(getAllCountries());
         setCurrentPage(1);

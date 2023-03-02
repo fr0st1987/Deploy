@@ -20,7 +20,7 @@ import Swal from 'sweetalert2';
 export const getAllCountries = () => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get('http://localhost:3001/countries')
+            const apiData = await axios.get('/countries')
             const countries = apiData.data;
             dispatch({ type: GET_COUNTRIES, payload: countries });
         } catch (error) {
@@ -32,7 +32,7 @@ export const getAllCountries = () => {
 export const getCountriesByName = (name) => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get(`http://localhost:3001/countries?name=${name}`)
+            const apiData = await axios.get(`/countries?name=${name}`)
             const countryByName = apiData.data
             dispatch({ type: GET_COUNTRIES_BY_NAME, payload: countryByName });
         } catch (error) {
@@ -50,7 +50,7 @@ export const getCountriesByName = (name) => {
 export const getCountriesById = (id) => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get(`http://localhost:3001/countries/${id}`)
+            const apiData = await axios.get(`/countries/${id}`)
             const countryById = apiData.data
             dispatch({ type: GET_COUNTRIES_BY_ID, payload: countryById });
         } catch (error) {
@@ -82,7 +82,7 @@ export const filterByActivities = (activities) => {
 export const getAllActivities = () => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get('http://localhost:3001/activities')
+            const apiData = await axios.get('/activities')
             const allActivities = apiData.data
             dispatch({ type: GET_ACTIVITIES, payload: allActivities });
         } catch (error) {
@@ -94,7 +94,7 @@ export const getAllActivities = () => {
 export function postActivity(payload) {
     return async function () {
         try {
-            const apiData = await axios.post("http://localhost:3001/activities", payload);
+            const apiData = await axios.post("/activities", payload);
             return {
                 type: POST_ACTIVITIES,
                 payload: apiData,
@@ -115,7 +115,7 @@ export function postActivity(payload) {
 export function deleteActivity(id) {
     return async function (dispatch) {
         try {
-            const activity = await axios.delete(`http://localhost:3001/activities/${id}`)
+            const activity = await axios.delete(`/activities/${id}`)
             return dispatch({
                 type: DELETE_ACTIVITY,
                 payload: activity,
@@ -151,22 +151,3 @@ export function deleteFavorites(id) {
 
 
 
-/* export let postUser = (data)=>{
-    return async function(dispatch){
-        fetch("http://localhost:3001/api/users", {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: { 'Content-Type': 'application/json' },
-            mode: 'cors'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log("sending the sign up from to the api...");
-                return dispatch({
-                    type: POST_USER,
-                    payload: data
-                })
-            })
-            .catch(err=>err) */
-
-// ojo es para creación de usuarios para login.
