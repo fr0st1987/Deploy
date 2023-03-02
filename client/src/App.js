@@ -19,7 +19,7 @@ require('dotenv').config();
 const {
   USER, PASSWORD,
 } = process.env
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-production-98a5.up.railway.app/';
 
 
 function App() {
