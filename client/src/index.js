@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import axios from 'axios';
 //  axios.defaults.baseURL = 'https://localhost:3001';
-axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001/';
+axios.defaults.baseURL = process.env.REACT_APP_API || 'https://deploy-production-98a5.up.railway.app';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
