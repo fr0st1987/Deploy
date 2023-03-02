@@ -33,14 +33,16 @@ function App() {
       navigate('/home');
     }
     else {
+      setTimeout(()=>{
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: `Wrong username or password!`,
       })
-    }
+    }, [5000])
   }
-
+  }
+  
   useEffect(() => {
     if (!access)
       navigate('/');
