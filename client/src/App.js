@@ -15,10 +15,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-require('dotenv').config();
-const {
-  USER, PASSWORD,
-} = process.env
+
 axios.defaults.baseURL = 'https://deploy-production-98a5.up.railway.app';
 
 
@@ -26,8 +23,8 @@ function App() {
   const location = useLocation()
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
-  const username = USER;
-  const password = PASSWORD;
+  const username = 'admin@admin.com';
+  const password = 'admin1234';
 
 
   function login(userData) {
