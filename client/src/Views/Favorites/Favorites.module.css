@@ -1,0 +1,11 @@
+.container {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(1, 1fr);
+gap: 3rem;
+width: 75%;
+margin-left: 160px;
+margin-top: 75px
+
+
+}

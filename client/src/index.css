@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  @font-face {
+    font-family: testing;
+    src: url("./Assets/AlegreyaSans-Regular.ttf");
+    /*url('../../src/image.jpeg') acá podes poner una font que sacaste y descargaste de algun lado.*/
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

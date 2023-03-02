@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  margin-top: 7rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  max-width: 600px;
+  background-color: #188fff16;
+}
+
+
+.detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.flagdetail {
+  grid-row: 3/3;
+  width: 100%;
+  max-height: 200px;
+  margin-bottom: 1rem;
+  
+}
+
+.flagdetail img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.info {
+  grid-row: 1/4;
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 1rem;
+  
+}
+
+
+
+.tittle2 {
+  font-size: 1.2rem;
+
+}
+
+.title2 img {
+  width: 5%;
+  height: 5%
+}
+.btn {
+  grid-row: 5/6;
+  cursor: pointer;
+  background-color: transparent;
+  color: #1890ff;
+  border: 1px dashed #1890ff;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  background-color: #1890ff;
+  color: white;
+  border: 1px solid #1890ff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .detail {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+
+  .flagdetail {
+    max-height: 150px;
+  }
+
+  .info {
+    grid-row: 2/4;
+    grid-column: 1/2;
+    margin: 1rem 0;
+    width: 30%
+  }
+  .image {
+   width: 75px;
+    height: 75px;
+  }
+  .info2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin: 1rem 0;
+  }
+
+  .tittle2 {
+    font-size: 1rem;
+  }
+}
+
+/* Media query para 576px */
+@media screen and (max-width: 576px) {
+  .detail {
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+
+  .flagdetail {
+    max-height: 100px;
+  }
+
+  .info {
+    grid-row: 2/4;
+    grid-column: 1/2;
+    margin: 0.5rem 0;
+  }
+
+  .info2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin: 0.5rem 0;
+  }
+
+  .tittle2 {
+    font-size: 0.8rem;
+  }
+}
